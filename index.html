@@ -4,122 +4,204 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   </head>
   <body>
     <!--HEADER-->
     <header id="home" class="site-header">
-      <div class="logo">
-        <img src="" alt="" />
-        <span>FESTIVA</span>
-      </div>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#tickets">Tickets</a></li>
-          <li><a href="#company">Company</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+<div class="container">
+  <div class="nav-content">
+    <div class="logo">
+      <img src="" alt="" />
+      <span class="logo-text">FESTIVA</span>
+    </div>
+    <nav class="nav-desktop">
+     <a  href="#hero" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About Us</a>
+      <a href="#tickets" class="nav-link">Tickets</a>
+      <a href="#company" class="nav-link">Company</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <i class="fas fa-bars"></i>
+  </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero" class="mobile-nav-link">Home</a>
+    <a href="#about" class="mobile-nav-link">About Us</a>
+    <a href="#tickets" class="mobile-nav-link">Tickets</a>
+    <a href="#company" class="mobile-nav-link">Company</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+</div>
+</div>
     </header>
     <main>
       <!--INFO BODY-->
-      <section id="about">
-        <div class="about-txt">
-          <h2>Price Table</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
-            dolorem cupiditate vel blanditiis ex. Nam ex cum, impedit nostrum at
-            dolorem veritatis quo minus, corrupti, velit illum quae repudiandae
-            neque.
-          </p>
+      <section id="hero" class="hero">
+        <div class="hero-bg">
+          <div class="bg-decoration bg-decoration-1"></div>
+          <div class="bg-decoration bg-decoration-2"></div>
+      </div>
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-name">Price Table</h1>
+            <p class="hero-description">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <div class="video-container">
+              <div class="video-player">
+                  <div class="video-overlay">
+                      <div class="video-content">
+                          <button class="play-btn" id="playBtn">
+                              <i class="fas fa-play"></i>
+                          </button>
+                          <h3 class="video-title">Hello, I'm John Doe</h3>
+                          <p class="video-description">A brief introduction to who I am and what I do</p>
+                      </div>
+                      <div class="video-controls">
+                          <div class="controls-left">
+                              <button class="control-btn" id="playControlBtn">
+                                  <i class="fas fa-play"></i>
+                              </button>
+                              <button class="control-btn" id="muteBtn">
+                                  <i class="fas fa-volume-mute"></i>
+                              </button>
+                          </div>
+                          <div class="controls-right">
+                              <span class="video-time">2:45</span>
+                          </div>
+                      </div>
+                      <div class="video-progress">
+                          <div class="progress-bar" id="progressBar"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+            <div class="scroll-indicator">
+              <i class="fas fa-chevron-down"></i>
+          </div>
+          </div>
+          <!-- <div class="video-window">
+        
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/mWRsgZuwf_8?si=gzLuaketJrSFGzhl"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+           
+          </div> -->
+          
         </div>
-        <div class="video-window">
-          <!--YouTube video-->
-          <iframe
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/mWRsgZuwf_8?si=gzLuaketJrSFGzhl"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
-        </div>
+       
       </section>
-      <section id="tickets">
-        <h2>Event Pass & Tickets</h2>
-        <p>
+      <!--TICKETS SECTION-->
+      <section id="tickets" class="ticket">
+       <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Event Pass & Tickets</h2>
+        <p class="section-subtitle">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tempora
-          blanditiis optio iusto accusantium quas suscipit. Odit dignissimos non
-          cupiditate, vitae delectus officia quasi ab expedita cumque aliquid et
-          nostrum.
+          blanditiis optio iusto accusantium quas suscipit.
         </p>
-        <div class="ticket-container">
-          <div class="ticket">
-            <h3>Silver Pass</h3>
-            <p>$35/month</p>
-            <p>For one person Ticket</p>
-            <ul>
-              <li>Regular Seating</li>
-              <li>Comfortable Sleeping</li>
-              <li>Aftemoon Snack</li>
-              <li>Afterparty Entrance</li>
-              <li>Idea Sharing</li>
+        </div>
+        <div class="ticket-grid">
+          <div class="ticket-card">
+            <h3 class="ticket-name">Silver Pass</h3>
+            <p class="ticket-price">$35/month</p>
+            <p class="ticket-description">For one person Ticket</p>
+            <ul class="ticket-details">
+              <li class="ticket-item">Regular Seating</li>
+              <li class="ticket-item">Comfortable Sleeping</li>
+              <li class="ticket-item">Aftemoon Snack</li>
+              <li class="ticket-item">Afterparty Entrance</li>
+              <li class="ticket-item">Idea Sharing</li>
             </ul>
-            <button>Buy a Ticket</button>
+            <button class="ticket-btn">Buy a Ticket</button>
           </div>
-          <div class="ticket">
-            <h3>Golden Pass</h3>
-            <p>$49/month</p>
-            <p>For one person Ticket</p>
-            <ul>
-              <li>Regular Seating</li>
-              <li>Comfortable Sleeping</li>
-              <li>Aftemoon Snack</li>
-              <li>Afterparty Entrance</li>
-              <li>Idea Sharing</li>
+          <div class="ticket-card">
+            <h3 class="ticket-name">Golden Pass</h3>
+            <p class="ticket-price">$49/month</p>
+            <p class="ticket-description">For one person Ticket</p>
+            <ul class="ticket-details">
+              <li class="ticket-item">Regular Seating</li>
+              <li class="ticket-item">Comfortable Sleeping</li>
+              <li class="ticket-item">Aftemoon Snack</li>
+              <li class="ticket-item">Afterparty Entrance</li>
+              <li class="ticket-item">Idea Sharing</li>
             </ul>
-            <button>Buy a Ticket</button>
+            <button class="ticket-btn">Buy a Ticket</button>
           </div>
-          <div class="ticket">
-            <h3>Platium Pass</h3>
-            <p></p>
-            <p>For one person Ticket</p>
-            <ul>
-              <li>Regular Seating</li>
-              <li>Comfortable Sleeping</li>
-              <li>Aftemoon Snack</li>
-              <li>Afterparty Entrance</li>
-              <li>Idea Sharing</li>
+          <div class="ticket-card">
+            <h3 class="ticket-name">Platium Pass</h3>
+            <p class="ticket-price">$66/month</p>
+            <p class="ticket-description">For one person Ticket</p>
+            <ul class="ticket-details">
+              <li class="ticket-item">Regular Seating</li>
+              <li class="ticket-item">Comfortable Sleeping</li>
+              <li class="ticket-item">Aftemoon Snack</li>
+              <li class="ticket-item">Afterparty Entrance</li>
+              <li class="ticket-item">Idea Sharing</li>
             </ul>
-            <button>Buy a Ticket</button>
+            <button class="ticket-btn">Buy a Ticket</button>
           </div>
         </div>
+       </div>
       </section>
       <!--Company-->
-      <section>
-        <img src="" alt="" />
-        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <div class="company-buttons">
-          <button>Be a partner</button>
-          <button>Purchase Ticket</button>
+      <section id="company" class="company">
+       <div class="container">
+        <div class="section-header">
+          <img src="" alt="" />
+        <h2 class="section-title">Let's Work Together</h2>
+        <p class="section-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima recusandae suscipit sequi quos modi.  </p>
         </div>
+        <div class="company-buttons">
+          <button class="quick-btn">Be a partner</button>
+          <button class="quick-btn">Purchase Ticket</button>
+        </div>
+       </div>
       </section>
     </main>
     <!--FOOTER-->
-    <footer id="contact">
-      <div class="footer-logo">
-        <img src="" alt="" />
-        <span></span>
+    <footer class="footer">
+      <div class="container">
+          <div class="footer-content">
+              <div class="footer-brand">
+                  <div class="logo">
+                      <div class="logo-icon">JD</div>
+                      <span class="logo-text">John Doe</span>
+                  </div>
+                  <p>A passionate developer creating amazing digital experiences. Let's build something great together!</p>
+              </div>
+              <div class="footer-social">
+                  <h3>Connect</h3>
+                  <div class="social-links">
+                      <a href="#" class="social-link">
+                          <i class="fab fa-github"></i>
+                      </a>
+                      <a href="#" class="social-link">
+                          <i class="fab fa-linkedin"></i>
+                      </a>
+                      <a href="#" class="social-link">
+                          <i class="fab fa-twitter"></i>
+                      </a>
+                      <a href="#" class="social-link">
+                          <i class="fab fa-instagram"></i>
+                      </a>
+                    </div>
+              </div>
+          </div>
       </div>
-      <div class="social-links">
-        <a href=""><img src="" alt="" /></a>
-        <a href=""><img src="" alt="" /></a>
-        <a href=""><img src="" alt="" /></a>
-      </div>
-    </footer>
+    </div>
+  </footer>
+  <script src="script.js"></script>
   </body>
 </html>
