@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Festiva</title>
     
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -11,197 +11,200 @@
   </head>
   <body>
     <!--HEADER-->
-    <header id="home" class="site-header">
-<div class="container">
-  <div class="nav-content">
-    <div class="logo">
-      <img src="" alt="" />
-      <span class="logo-text">FESTIVA</span>
-    </div>
-    <nav class="nav-desktop">
-     <a  href="#hero" class="nav-link">Home</a>
-      <a href="#about" class="nav-link">About Us</a>
-      <a href="#tickets" class="nav-link">Tickets</a>
-      <a href="#company" class="nav-link">Company</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
-    <button class="mobile-menu-btn" id="mobileMenuBtn">
-      <i class="fas fa-bars"></i>
-  </button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#hero" class="mobile-nav-link">Home</a>
-    <a href="#about" class="mobile-nav-link">About Us</a>
-    <a href="#tickets" class="mobile-nav-link">Tickets</a>
-    <a href="#company" class="mobile-nav-link">Company</a>
-    <a href="#contact" class="mobile-nav-link">Contact</a>
-</div>
-</div>
-    </header>
+    <header class="header">
+      <nav class="nav">
+          <div class="nav-container">
+              <div class="logo">
+                  <img src="https://images.unsplash.com/photo-1600269558224-625f34642074" alt="Festiva Logo" class="logo-img">
+                  <span class="logo-text">FESTIVA</span>
+              </div>
+              
+              <div class="nav-menu">
+                  <a href="#home" class="nav-link">Home</a>
+                  <a href="#about" class="nav-link">About Us</a>
+                  <a href="#tickets" class="nav-link">Tickets</a>
+                  <a href="#community" class="nav-link">Company</a>
+                  <a href="#footer" class="nav-link">Contact</a>
+              </div>
+              
+              <div class="mobile-menu-btn">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+              </div>
+          </div>
+      </nav>
+  </header>
     <main>
       <!--INFO BODY-->
-      <section id="hero" class="hero">
-        <div class="hero-bg">
-          <div class="bg-decoration bg-decoration-1"></div>
-          <div class="bg-decoration bg-decoration-2"></div>
+      <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+          <h1 class="hero-title">FESTIVA</h1>
+          <p class="hero-subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nihil numquam earum enim, tenetur quibusdam exercitationem eaque vel aperiam, ut nobis nam impedit blanditiis corporis magni veritatis excepturi, similique delectus quisquam?</p>
+          <button class="cta-button" onclick="scrollToSection('tickets')">Get Tickets</button>
       </div>
-        <div class="container">
-          <div class="hero-content">
-            <h1 class="hero-name">Price Table</h1>
-            <p class="hero-description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  </section>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
             </p>
-            <div class="video-container">
-              <div class="video-player">
-                  <div class="video-overlay">
-                      <div class="video-content">
-                          <button class="play-btn" id="playBtn">
-                              <i class="fas fa-play"></i>
-                          </button>
-                          <h3 class="video-title">Hello, I'm John Doe</h3>
-                          <p class="video-description">A brief introduction to who I am and what I do</p>
-                      </div>
-                      <div class="video-controls">
-                          <div class="controls-left">
-                              <button class="control-btn" id="playControlBtn">
-                                  <i class="fas fa-play"></i>
-                              </button>
-                              <button class="control-btn" id="muteBtn">
-                                  <i class="fas fa-volume-mute"></i>
-                              </button>
+        </div>
+        
+        <div class="video-container">
+            <h3 class="video-title">Featured Video</h3>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/ktvTqknDobU"
+                    title="Imagine Dragons - Believer"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+      <!--TICKETS SECTION-->
+    <section id="tickets" class="tickets">
+      <div class="container">
+          <div class="section-header">
+              <span class="section-label">TICKET PRICING</span>
+              <h2 class="section-title">Event Pass & Tickets</h2>
+              <p class="section-description">
+                  Some info about tickets - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Choose the perfect ticket for your festival experience.
+              </p>
+          </div>
+          
+          <div class="tickets-grid">
+              <div class="ticket-card">
+                  <div class="ticket-left">
+                      <div class="ticket-info">
+                          <h3 class="ticket-title">Basic Pass</h3>
+                          <div class="ticket-price">
+                              <span class="price">$35</span>
+                              <span class="period">/month</span>
                           </div>
-                          <div class="controls-right">
-                              <span class="video-time">2:45</span>
-                          </div>
+                          <p class="ticket-subtitle">For one Person Ticket</p>
                       </div>
-                      <div class="video-progress">
-                          <div class="progress-bar" id="progressBar"></div>
-                      </div>
+                      
+                      <ul class="ticket-features">
+                          <li><span class="checkmark">✓</span>Regular Seating</li>
+                          <li><span class="checkmark">✓</span>Comfortable Seating</li>
+                          <li><span class="checkmark">✓</span>Afternoon Snack</li>
+                          <li><span class="checkmark">✓</span>Awesome Entrance</li>
+                          <li><span class="checkmark">✓</span>Live Sharing</li>
+                      </ul>
                   </div>
+                  
+                  <button class="ticket-button">Buy a Ticket</button>
+              </div>
+              
+              <div class="ticket-card featured">
+                  <div class="popular-badge">Most Popular</div>
+                  <div class="ticket-left">
+                      <div class="ticket-info">
+                          <h3 class="ticket-title">Premium Pass</h3>
+                          <div class="ticket-price">
+                              <span class="price">$49</span>
+                              <span class="period">/month</span>
+                          </div>
+                          <p class="ticket-subtitle">For one Person Ticket</p>
+                      </div>
+                      
+                      <ul class="ticket-features">
+                          <li><span class="checkmark">✓</span>Regular Seating</li>
+                          <li><span class="checkmark">✓</span>Comfortable Seating</li>
+                          <li><span class="checkmark">✓</span>Afternoon Snack</li>
+                          <li><span class="checkmark">✓</span>Awesome Entrance</li>
+                          <li><span class="checkmark">✓</span>Live Sharing</li>
+                      </ul>
+                  </div>
+                  
+                  <button class="ticket-button">Buy a Ticket</button>
+              </div>
+              
+              <div class="ticket-card">
+                  <div class="ticket-left">
+                      <div class="ticket-info">
+                          <h3 class="ticket-title">Exclusive Pass</h3>
+                          <div class="ticket-price">
+                              <span class="price">$66</span>
+                              <span class="period">/month</span>
+                          </div>
+                          <p class="ticket-subtitle">For one Person Ticket</p>
+                      </div>
+                      
+                      <ul class="ticket-features">
+                          <li><span class="checkmark">✓</span>Regular Seating</li>
+                          <li><span class="checkmark">✓</span>Comfortable Seating</li>
+                          <li><span class="checkmark">✓</span>Afternoon Snack</li>
+                          <li><span class="checkmark">✓</span>Awesome Entrance</li>
+                          <li><span class="checkmark">✓</span>Live Sharing</li>
+                      </ul>
+                  </div>
+                  
+                  <button class="ticket-button">Buy a Ticket</button>
               </div>
           </div>
-            <div class="scroll-indicator">
-              <i class="fas fa-chevron-down"></i>
-          </div>
-          </div>
-          <!-- <div class="video-window">
-        
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/mWRsgZuwf_8?si=gzLuaketJrSFGzhl"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-            ></iframe>
-           
-          </div> -->
-          
-        </div>
-       
-      </section>
-      <!--TICKETS SECTION-->
-      <section id="tickets" class="ticket">
-       <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Event Pass & Tickets</h2>
-        <p class="section-subtitle">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque tempora
-          blanditiis optio iusto accusantium quas suscipit.
-        </p>
-        </div>
-        <div class="ticket-grid">
-          <div class="ticket-card">
-            <h3 class="ticket-name">Silver Pass</h3>
-            <p class="ticket-price">$35/month</p>
-            <p class="ticket-description">For one person Ticket</p>
-            <ul class="ticket-details">
-              <li class="ticket-item">Regular Seating</li>
-              <li class="ticket-item">Comfortable Sleeping</li>
-              <li class="ticket-item">Aftemoon Snack</li>
-              <li class="ticket-item">Afterparty Entrance</li>
-              <li class="ticket-item">Idea Sharing</li>
-            </ul>
-            <button class="ticket-btn">Buy a Ticket</button>
-          </div>
-          <div class="ticket-card">
-            <h3 class="ticket-name">Golden Pass</h3>
-            <p class="ticket-price">$49/month</p>
-            <p class="ticket-description">For one person Ticket</p>
-            <ul class="ticket-details">
-              <li class="ticket-item">Regular Seating</li>
-              <li class="ticket-item">Comfortable Sleeping</li>
-              <li class="ticket-item">Aftemoon Snack</li>
-              <li class="ticket-item">Afterparty Entrance</li>
-              <li class="ticket-item">Idea Sharing</li>
-            </ul>
-            <button class="ticket-btn">Buy a Ticket</button>
-          </div>
-          <div class="ticket-card">
-            <h3 class="ticket-name">Platium Pass</h3>
-            <p class="ticket-price">$66/month</p>
-            <p class="ticket-description">For one person Ticket</p>
-            <ul class="ticket-details">
-              <li class="ticket-item">Regular Seating</li>
-              <li class="ticket-item">Comfortable Sleeping</li>
-              <li class="ticket-item">Aftemoon Snack</li>
-              <li class="ticket-item">Afterparty Entrance</li>
-              <li class="ticket-item">Idea Sharing</li>
-            </ul>
-            <button class="ticket-btn">Buy a Ticket</button>
-          </div>
-        </div>
-       </div>
-      </section>
+      </div>
+  </section>
       <!--Company-->
-      <section id="company" class="company">
-       <div class="container">
-        <div class="section-header">
-          <img src="" alt="" />
-        <h2 class="section-title">Let's Work Together</h2>
-        <p class="section-subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima recusandae suscipit sequi quos modi.  </p>
+      <section id="community" class="community">
+        <div class="container">
+            <div class="community-content">
+                <div class="community-logo">
+                    <img src="https://images.unsplash.com/photo-1600269558224-625f34642074" alt="Festiva Logo">
+                </div>
+                <h2 class="community-title">
+                    Join the biggest Marketing<br>
+                    Community of the world
+                </h2>
+                <p class="community-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <div class="community-buttons">
+                    <button class="primary-button">Get Started</button>
+                    <button class="secondary-button">Purchase Tickets</button>
+                </div>
+            </div>
         </div>
-        <div class="company-buttons">
-          <button class="quick-btn">Be a partner</button>
-          <button class="quick-btn">Purchase Ticket</button>
-        </div>
-       </div>
-      </section>
+    </section>
     </main>
     <!--FOOTER-->
-    <footer class="footer">
+    <footer id="contact" class="footer">
       <div class="container">
           <div class="footer-content">
-              <div class="footer-brand">
-                  <div class="logo">
-                      <div class="logo-icon">JD</div>
-                      <span class="logo-text">John Doe</span>
-                  </div>
-                  <p>A passionate developer creating amazing digital experiences. Let's build something great together!</p>
+              <div class="footer-logo">
+                  <img src="https://images.unsplash.com/photo-1600269558224-625f34642074" alt="Festiva Logo">
+                  <span class="footer-logo-text">FESTIVA</span>
               </div>
-              <div class="footer-social">
-                  <h3>Connect</h3>
-                  <div class="social-links">
-                      <a href="#" class="social-link">
-                          <i class="fab fa-github"></i>
-                      </a>
-                      <a href="#" class="social-link">
-                          <i class="fab fa-linkedin"></i>
-                      </a>
-                      <a href="#" class="social-link">
-                          <i class="fab fa-twitter"></i>
-                      </a>
-                      <a href="#" class="social-link">
-                          <i class="fab fa-instagram"></i>
-                      </a>
-                    </div>
+              <p class="footer-text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+              <div class="social-links">
+                  <a href="#" class="social-link">
+                      <i class="fab fa-github"></i>
+                  </a>
+                  <a href="#" class="social-link">
+                      <i class="fab fa-linkedin"></i>
+                  </a>
+                  <a href="#" class="social-link">
+                      <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="#" class="social-link">
+                      <i class="fab fa-instagram"></i>
+                  </a>
               </div>
           </div>
       </div>
-    </div>
   </footer>
-  <script src="script.js"></script>
+
+
+  <script src="./js/script.js"></script>
   </body>
 </html>
