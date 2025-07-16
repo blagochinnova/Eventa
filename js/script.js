@@ -205,15 +205,3 @@ function showLoading() {
 function hideLoading() {
     // Hide loading animation if needed
 }
-
-// Error handling
-function showError(message) {
-    console.error(message);
-    // Show error message to user
-}
-
-// Success message
-function showSuccess(message) {
-    console.log(message);
-    // Show success message to user
-}
