@@ -10,10 +10,17 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.6;
   color: #ffffff;
-  background: linear-gradient(135deg, #6b46c1 0%, #9333ea 25%, #db2777 50%, #3b82f6 75%, #8b5cf6 100%);
+  background: linear-gradient(
+    135deg,
+    #6b46c1 0%,
+    #9333ea 25%,
+    #db2777 50%,
+    #3b82f6 75%,
+    #8b5cf6 100%
+  );
   min-height: 100vh;
 }
 
@@ -46,8 +53,9 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.9);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+  border: 2px solid rgba(255, 255, 255, 0.18);
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -95,11 +103,11 @@ body {
   color: #a855f7;
 }
 
-.nav-link.active {
+/* .nav-link.active {
   color: #a855f7;
-}
+} */
 .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -134,7 +142,12 @@ body {
   justify-content: center;
   text-align: center;
   position: relative;
-  background: linear-gradient(135deg, rgba(107, 70, 193, 0.9), rgba(147, 51, 234, 0.9), rgba(219, 39, 119, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(107, 70, 193, 0.9),
+    rgba(147, 51, 234, 0.9),
+    rgba(219, 39, 119, 0.9)
+  );
 }
 
 .hero-content {
@@ -147,21 +160,28 @@ body {
   font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 900;
   margin-bottom: 1.5rem;
-  background: linear-gradient(45deg, #ffffff, #e0e7ff);
+  background-image: url(../img/stars.jpg);
+  background-size: cover;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
   text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
   animation: glow 2s ease-in-out infinite alternate;
+  transform: scaleX(1.5);
+  display: inline-block;
 }
 
 @keyframes glow {
-  from { text-shadow: 0 0 30px rgba(255, 255, 255, 0.3); }
-  to { text-shadow: 0 0 40px rgba(255, 255, 255, 0.5); }
+  from {
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+  }
+  to {
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.5);
+  }
 }
 
 .hero-subtitle {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-size: clamp(0.9rem, 3vw, 1.5rem);
   margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.9);
 }
@@ -171,7 +191,7 @@ body {
   color: white;
   border: none;
   padding: 1rem 2rem;
-  font-size: 1.1rem;
+  font-size: clamp(0.6rem, 2vw, 1.1rem);
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
@@ -204,7 +224,7 @@ body {
 }
 
 .section-description {
-  font-size: 1.1rem;
+  font-size: clamp(0.9rem, 3vw, 1.5rem);
   color: rgba(255, 255, 255, 0.8);
   max-width: 800px;
   margin: 0 auto;
@@ -266,7 +286,11 @@ body {
 }
 
 .ticket-card {
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1));
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.1),
+    rgba(236, 72, 153, 0.1)
+  );
   border: 1px solid rgba(139, 92, 246, 0.3);
   border-radius: 15px;
   padding: 2rem;
@@ -287,7 +311,11 @@ body {
 
 .ticket-card.featured {
   border: 2px solid #8b5cf6;
-  background: linear-gradient(135deg, rgba(139, 92, 246, 0.2), rgba(236, 72, 153, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(139, 92, 246, 0.2),
+    rgba(236, 72, 153, 0.2)
+  );
 }
 
 .popular-badge {
@@ -316,7 +344,7 @@ body {
 }
 
 .ticket-title {
-  font-size: 1.5rem;
+  font-size: clamp(2.5rem, 5vw, 3rem);
   font-weight: 600;
   color: #ffffff;
   margin-bottom: 1rem;
@@ -330,7 +358,7 @@ body {
 }
 
 .price {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw, 3rem);
   font-weight: 700;
   color: #ffffff;
 }
@@ -343,7 +371,7 @@ body {
 
 .ticket-subtitle {
   color: rgba(255, 255, 255, 0.7);
-  font-size: 0.9rem;
+  font-size: clamp(0.9rem, 3vw, 1.5rem);
 }
 
 .ticket-features {
@@ -548,69 +576,74 @@ body {
   height: 24px;
 }
 
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .nav-menu {
-      display: none;
+    display: none;
   }
-  
+
   .mobile-menu-btn {
-      display: flex;
+    display: flex;
   }
-  
+  .logo-text {
+    font-size: 1.2rem;
+  }
   .hero-title {
-      font-size: 3rem;
+    font-size: 3rem;
   }
-  
+  .cta-button {
+    padding: 0.7rem 1rem;
+  }
   .tickets-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
-  
+
   .ticket-card {
-      min-height: 350px;
+    min-height: 350px;
   }
-  
+  .ticket-button {
+    padding: 0.7rem 1rem;
+  }
   .community-buttons {
-      flex-direction: column;
-      align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .primary-button,
   .secondary-button {
-      width: 100%;
-      max-width: 300px;
+    width: 100%;
+    max-width: 300px;
   }
-  
+
   .social-links {
-      gap: 1rem;
+    gap: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .container {
-      padding: 0 15px;
+    padding: 0 15px;
   }
-  
+
   .nav-container {
-      padding: 1rem;
+    padding: 1rem;
   }
-  
+
   .hero-content {
-      padding: 0 1rem;
+    padding: 0 1rem;
   }
-  
+
   .ticket-card {
-      padding: 1.5rem;
-      min-height: 300px;
+    padding: 1.5rem;
+    min-height: 300px;
   }
-  
+
   .ticket-features li {
-      font-size: 0.85rem;
+    font-size: 0.85rem;
   }
-  
+
   .video-container {
-      padding: 1.5rem;
+    padding: 1.5rem;
   }
 }
