@@ -193,7 +193,7 @@ body {
   color: white;
   border: none;
   padding: 1rem 2rem;
-  font-size: clamp(0.6rem, 2vw, 1.1rem);
+  font-size: clamp(0.8rem, 2vw, 1.1rem);
   font-weight: 600;
   border-radius: 50px;
   cursor: pointer;
@@ -592,9 +592,6 @@ body {
   }
   .hero-title {
     font-size: 3rem;
-  }
-  .cta-button {
-    padding: 0.7rem 1rem;
   }
   .tickets-grid {
     grid-template-columns: 1fr;
