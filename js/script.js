@@ -187,24 +187,3 @@ function getCurrentSection() {
   }
   return "home";
 }
-
-// Handle form submissions (if needed)
-function handleFormSubmit(formId) {
-  const form = document.getElementById(formId);
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      // Handle form submission logic here
-      console.log("Form submitted");
-    });
-  }
-}
-
-// Loading animation
-function showLoading() {
-  // Add loading animation if needed
-}
-
-function hideLoading() {
-  // Hide loading animation if needed
-}
