@@ -76,32 +76,53 @@ function addTicketCardEffects() {
 
 // Navigation menu click handlers
 function setupNavigation() {
-  const navLinks = document.querySelectorAll(".nav-link");
-
-  navLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const targetId = this.getAttribute("href").substring(1);
-      scrollToSection(targetId);
+    const navLinks = document.querySelectorAll(".nav-link");
+  
+    navLinks.forEach((link) => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        scrollToSection(targetId);
+        closeMobileMenu(); 
+        setTimeout(() => {
+          window.location.hash = targetId; 
+        }, 500); 
+      });
     });
-  });
-}
+  }
 
 // Mobile menu toggle (basic implementation)
 function setupMobileMenu() {
-  const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
-  const closeBtn = document.querySelector(".close-menu-btn");
-  const navMenu = document.querySelector(".nav-menu");
-
-  if (mobileMenuBtn && closeBtn && navMenu) {
-    mobileMenuBtn.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
-    });
-    closeBtn.addEventListener("click", function () {
-      navMenu.classList.toggle("active");
-    });
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const closeMenuBtn = document.getElementById("closeMenuBtn");
+    const navMenu = document.querySelector(".nav-menu");
+    const body = document.body;
+  
+    if (mobileMenuBtn && closeMenuBtn && navMenu) {
+      mobileMenuBtn.addEventListener("click", function () {
+        navMenu.classList.add("active");
+        body.classList.add("menu-open");
+        mobileMenuBtn.style.display = "none";
+        closeMenuBtn.style.display = "block";
+      });
+  
+      closeMenuBtn.addEventListener("click", function () {
+        closeMobileMenu();
+      });
+    }
   }
-}
+  
+  function closeMobileMenu() {
+    const navMenu = document.querySelector(".nav-menu");
+    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+    const closeMenuBtn = document.getElementById("closeMenuBtn");
+    const body = document.body;
+  
+    navMenu.classList.remove("active");
+    body.classList.remove("menu-open");
+    mobileMenuBtn.style.display = "block";
+    closeMenuBtn.style.display = "none";
+  }
 
 // Parallax effect for hero section
 function addParallaxEffect() {
