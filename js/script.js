@@ -90,10 +90,14 @@ function setupNavigation() {
 // Mobile menu toggle (basic implementation)
 function setupMobileMenu() {
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+  const closeBtn = document.querySelector(".close-menu-btn");
   const navMenu = document.querySelector(".nav-menu");
 
-  if (mobileMenuBtn && navMenu) {
+  if (mobileMenuBtn && closeBtn && navMenu) {
     mobileMenuBtn.addEventListener("click", function () {
+      navMenu.classList.toggle("active");
+    });
+    closeBtn.addEventListener("click", function () {
       navMenu.classList.toggle("active");
     });
   }
